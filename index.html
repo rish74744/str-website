@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cozy Cottage — Your Town</title>
+  <meta name="description" content="Modern Beachfront 3BR townhome. Fast WiFi, Tesla charger, 14 guests." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Modern Beachfront Townhome</h1>
+      <p class="subtitle">3BR • Sleeps 14 • Tesla Charger • 1 min to the beach</p>
+      <a class="cta" href="#booking">Check availability</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="gallery" class="card">
+      <h2>Photos</h2>
+      <div class="grid">
+        <img src="images/Outside.jpg" alt="Outside View" />
+        <img src="images/LivingRoom.jpg" alt="Living room" />
+        <img src="images/Kitchen.jpg" alt="Kitchen" />
+        <img src="images/Bedroom.jpg" alt="Bedroom" />
+      </div>
+    </section>
+
+    <section id="details" class="card">
+      <h2>Details & Amenities</h2>
+      <ul class="amenities">
+        <li>Fast WiFi</li>
+        <li>Full kitchen</li>
+        <li>Washer / Dryer</li>
+        <li>Free parking</li>
+        <li>Smart lock</li>
+      </ul>
+      <p class="price"><strong>From $500 / night</strong></p>
+    </section>
+
+    <section id="booking" class="card">
+      <h2>Book / Contact</h2>
+      <form name="booking" method="POST" data-netlify="true" id="bookingForm">
+        <input type="hidden" name="form-name" value="booking" />
+        <label>
+          Your name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Check-in
+          <input type="date" name="checkin" required />
+        </label>
+        <label>
+          Check-out
+          <input type="date" name="checkout" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <button type="submit">Send inquiry</button>
+      </form>
+      <div id="formMessage" aria-live="polite"></div>
+    </section>
+
+
+    <section id="location" class="card">
+      <h2>Neighborhood</h2>
+      <p>Quiet residential street, 10 minutes to downtown, near restaurants and parks.</p>
+      <div id="map">Map placeholder — add embedded Google Map iframe here</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Modern Townhome</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
