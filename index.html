@@ -107,8 +107,10 @@ form.addEventListener('submit', (e) => {
 document.getElementById('checkAvailability').addEventListener('click', function(e) {
   alert('Loading availability calendar...');
 //document.addEventListener('DOMContentLoaded', function () {
-  e.preventDefault();
+  //e.preventDefault();
   const calendarEl = document.getElementById('calendar');
+  alert('Initializing calendar...');
+  alert(calendarEl.innerHTML);
   if (!calendarEl.innerHTML) {
     alert('Loading availability calendar...');
     calendarEl.innerHTML = `
