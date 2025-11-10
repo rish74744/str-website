@@ -11,13 +11,15 @@ form.addEventListener('submit', (e) => {
 });
 
 // FullCalendar setup
-document.addEventListener('DOMContentLoaded', function () {
+document.getElementById('checkAvailability').addEventListener('click', function(e) {
+//document.addEventListener('DOMContentLoaded', function () {
+  e.preventDefault();
   const calendarEl = document.getElementById('calendar');
-
+ 
   const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     events: {
-      url: 'https://your-calendar-url.ics', // Replace with your iCal feed URL
+      url: 'https://calendar.google.com/calendar/u/0?cid=cmlzaGkuc3JpdmFzdGF2QGdtYWlsLmNvbQ', // Replace with your iCal feed URL
       format: 'ics'
     },
     eventColor: '#ccc', // grey out unavailable dates
