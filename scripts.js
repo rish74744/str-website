@@ -12,6 +12,7 @@ form.addEventListener('submit', (e) => {
 
 // FullCalendar setup
 document.getElementById('checkAvailability').addEventListener('click', function(e) {
+  alert('Loading availability calendar...');
 //document.addEventListener('DOMContentLoaded', function () {
   e.preventDefault();
   const calendarEl = document.getElementById('calendar');
