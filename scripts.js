@@ -15,17 +15,13 @@ document.getElementById('checkAvailability').addEventListener('click', function(
 //document.addEventListener('DOMContentLoaded', function () {
   e.preventDefault();
   const calendarEl = document.getElementById('calendar');
- 
-  const calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth',
-    events: {
-      url: 'https://calendar.google.com/calendar/u/0?cid=cmlzaGkuc3JpdmFzdGF2QGdtYWlsLmNvbQ', // Replace with your iCal feed URL
-      format: 'ics'
-    },
-    eventColor: '#ccc', // grey out unavailable dates
-    eventDisplay: 'background', // show as blocked
-    height: 'auto'
-  });
+  if (!calendarEl.innerHTML) {
+    calendarEl.innerHTML = `
+      <iframe src="https://calendar.google.com/calendar/u/0?cid=cmlzaGkuc3JpdmFzdGF2QGdtYWlsLmNvbQ"
+              style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    `;
+  }
+
 
   calendar.render();
 });
