@@ -16,10 +16,14 @@ document.getElementById('checkAvailability').addEventListener('click', function(
   e.preventDefault();
   const calendarEl = document.getElementById('calendar');
   if (!calendarEl.innerHTML) {
+    alert('Loading availability calendar...');
     calendarEl.innerHTML = `
       <iframe src="https://calendar.google.com/calendar/u/0?cid=cmlzaGkuc3JpdmFzdGF2QGdtYWlsLmNvbQ"
               style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
     `;
+  }
+  else {
+    alert('Availability calendar is already loaded.');
   }
 
 
