@@ -23,5 +23,5 @@ document.getElementById('checkAvailability').addEventListener('click', function(
   }
 
 
-  calendar.render();
+  calendarEl.render();
 });
